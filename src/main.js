@@ -2,29 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-import Vuex from 'vuex'
 import App from './App'
 import router from './router'
 import './assets/stylus/main.styl'
+import {default as store} from './store'
 
 Vue.config.productionTip = false;
-Vue.use(Vuex);
 
 Vue.use(Vuetify);
-const store = new Vuex.Store({
-  state: {
-    sidebar: true
-  },
-  mutations: {
-    toggleSidebar (state, val) {
-      if (val === undefined) {
-        state.sidebar = !state.sidebar;
-      } else {
-        state.sidebar = val
-      }
-    }
-  }
-});
+
+
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,9 +1,8 @@
 <template>
   <v-app id="app">
-    <v-toolbar>
-      <v-toolbar-title>Toolbar</v-toolbar-title>
-    </v-toolbar>
+    <app-toolbar></app-toolbar>
     <main>
+      <app-sidebar></app-sidebar>
       <v-content>
         <v-container fluid>
           <router-view></router-view>
@@ -15,18 +14,16 @@
 </template>
 
 <script>
-    export default {
-        name: 'app'
+  import AppToolbar from './components/AppToolbar.vue'
+  import AppSidebar from './components/AppSidebar.vue'
+  export default {
+    name: 'app',
+    components: {
+        AppToolbar, AppSidebar
     }
+  }
 </script>
 
 <style>
-  #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+
 </style>

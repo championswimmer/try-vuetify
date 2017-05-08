@@ -4,6 +4,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import App from './App'
 import router from './router'
+import './assets/stylus/main.styl'
 
 Vue.config.productionTip = false;
 Vue.use(Vuetify);

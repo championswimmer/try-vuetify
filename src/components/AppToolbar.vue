@@ -1,6 +1,6 @@
 <template>
   <v-toolbar class="red">
-    <v-toolbar-side-icon @click.native.stop="nav2 = !nav2" />
+    <v-toolbar-side-icon @click.native.stop="toggleSidebar" />
     <v-toolbar-title> BOSS </v-toolbar-title>
     <v-toolbar-items>
       <v-btn icon dark>
@@ -32,9 +32,10 @@
 <script>
   export default {
     name: 'app-toolbar',
-    data: function () {
-        return {
-          sidebarOpen
+    //props: ['sidenav'],
+    methods: {
+        toggleSidebar: function(event) {
+            this.$store.commit('toggleSidebar')
         }
     }
   }

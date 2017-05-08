@@ -1,5 +1,5 @@
 <template>
-  <v-sidebar left fixed drawer>
+  <v-sidebar left fixed drawer v-model="sidebar">
     <v-list>
       <v-list-item v-for="i in 3" :key="i">
         <v-list-tile>
@@ -12,6 +12,16 @@
 
 <script>
   export default {
-    name: 'app-sidebar'
+    name: 'app-sidebar',
+    computed: {
+      sidebar: {
+        get: function () {
+          return this.$store.state.sidebar
+        },
+        set: function (val) {
+          this.$store.commit('toggleSidebar', val)
+        }
+      }
+    }
   }
 </script>

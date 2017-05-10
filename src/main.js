@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import App from './App'
-import router from './router'
-import './assets/stylus/main.styl'
-import {default as store} from './store'
+
+import router from '@/router'
+import '@/assets/stylus/main.styl'
+import {default as store} from '@/store'
 
 Vue.config.productionTip = false;
 

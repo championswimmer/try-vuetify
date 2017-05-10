@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Hello from '../components/Hello.vue'
 import Rules from '../components/rules/Index.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [

@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app" top-toolbar sidebar-under-toolbar>
+  <v-app id="app" top-toolbar left-fixed-sidebar sidebar-under-toolbar>
     <app-toolbar></app-toolbar>
     <main>
       <app-sidebar></app-sidebar>
@@ -14,8 +14,8 @@
 </template>
 
 <script>
-  import AppToolbar from '@/components/AppToolbar.vue'
-  import AppSidebar from '@/components/AppSidebar.vue'
+  import AppToolbar from './components/AppToolbar.vue'
+  import AppSidebar from './components/AppSidebar.vue'
   export default {
     name: 'app',
     components: {

@@ -1,5 +1,5 @@
 <template>
-  <v-sidebar left fixed drawer v-model="sidebar">
+  <v-sidebar id="left-sidebar" left drawer v-model="sidebarOpen">
     <v-list>
       <v-list-item v-for="i in 3" :key="i">
         <v-list-tile>
@@ -14,9 +14,9 @@
   export default {
     name: 'app-sidebar',
     computed: {
-      sidebar: {
+      sidebarOpen: {
         get: function () {
-          return this.$store.state.sidebar
+          return this.$store.state.sidebar.open
         },
         set: function (val) {
           this.$store.commit('toggleSidebar', val)
@@ -25,3 +25,9 @@
     }
   }
 </script>
+
+<style scoped>
+  #left-sidebar {
+    padding-top: 64px;
+  }
+</style>

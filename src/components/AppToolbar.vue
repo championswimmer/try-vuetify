@@ -1,7 +1,13 @@
 <template>
-  <v-toolbar class="red">
-    <v-toolbar-side-icon @click.native.stop="toggleSidebar" />
-    <v-toolbar-title> BOSS </v-toolbar-title>
+  <v-toolbar>
+    <v-toolbar-side-icon class="hidden-lg-and-up" @click.native.stop="toggleSidebar" />
+    <v-toolbar-title>
+      <router-link to="/">
+          <v-btn flat dark large>
+            <v-icon>home</v-icon>
+            BOSS</v-btn>
+      </router-link>
+    </v-toolbar-title>
     <v-toolbar-items>
       <v-btn icon dark>
         <v-icon>account_circle</v-icon>
@@ -34,9 +40,16 @@
     name: 'app-toolbar',
     //props: ['sidenav'],
     methods: {
-        toggleSidebar: function(event) {
-            this.$store.commit('toggleSidebar')
-        }
+      toggleSidebar: function(event) {
+        this.$store.commit('toggleSidebar')
+      }
     }
   }
 </script>
+
+<style>
+  .toolbar__title a {
+    color: white;
+    text-decoration: none;
+  }
+</style>

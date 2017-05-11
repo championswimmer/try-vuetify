@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app" top-toolbar left-fixed-sidebar sidebar-under-toolbar>
+  <v-app id="app" left-fixed-sidebar sidebar-under-toolbar>
     <app-toolbar></app-toolbar>
     <main>
       <app-sidebar></app-sidebar>

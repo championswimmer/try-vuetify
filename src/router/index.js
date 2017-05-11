@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '../components/Hello.vue'
-import Rules from '../components/rules/Index.vue'
+import Home from '../components/Home/Index.vue'
+import Rules from '../components/Rules/Index.vue'
 
 Vue.use(Router);
 
@@ -9,8 +9,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'Home',
+      component: Home
     },
     {
       path: '/rules', component: Rules, name: 'Rules'

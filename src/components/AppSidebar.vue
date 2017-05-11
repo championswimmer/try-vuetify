@@ -1,5 +1,5 @@
 <template>
-  <v-sidebar id="left-sidebar" left drawer v-model="sidebarOpen">
+  <v-sidebar id="left-sidebar" left fixed v-model="sidebarOpen">
     <v-list>
       <v-list-item  v-for="e in entries" :key="e.title">
           <v-list-tile :href="e.link" ripple router="true">
